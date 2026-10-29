@@ -26,7 +26,7 @@ Evolução técnica da interface web da Vinheria Agnello desenvolvida pelo grupo
 | **Grade de História (`.cards-container`)** | `display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;` | `:hover` (Destaque tridimensional)<br>`:nth-child(odd/even)` (Bordas alternadas) | `transform: scale(1.02);` (Aumento progressivo de tamanho do card) |
 | **Adega Inteligente (`.tech-wrapper`)** | `display: flex; align-items: center; gap: 60px; flex-wrap: wrap;` | `:hover` (Feedback visual na imagem) | `transform: rotate(0.5deg) scale(1.01);` (Leve rotação da área de hardware) |
 | **Formulário de Contato (`.contact-form`)** | `display: flex; flex-direction: column;` | `:focus` (Suavização e brilho no campo selecionado) | `transform: translateY(-3px);` (Elevação tátil do botão de envio) |
-
+UTILIZADOS A PARTE: STYLE NO HTML ENSINADO DIA 28/10/2026
 ---
 
 ## 👤 Desenvolvedor
