@@ -1,0 +1,449 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E VARIÁVEIS (:ROOT) - Mantidas do seu CP2
+   ========================================================================== */
+:root {
+    --cor-fundo-claro: #faf8f5;
+    --cor-fundo-tech: #f0e9e4;
+    --cor-fundo-placeholder: #f0e6e1;
+    --cor-texto-escuro: #2c2523;
+    --cor-texto-suave: #615553;
+    --cor-texto-card: #544744;
+    --cor-texto-mutado: #948486;
+    --cor-vinho-principal: #4a121a;
+    --cor-vinho-medio: #2b0b11;
+    --cor-vinho-escuro: #1c0508;
+    --cor-vinho-profundo: #170406;
+    --cor-dourado-cortica: #c49a6c;
+    --cor-creme-link: #ebdcd5;
+    --cor-borda-input: #cbd2d6;
+    --cor-input-fundo: #faf8f6;
+    --cor-branco: #ffffff;
+    --fonte-principal: 'Georgia', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    color: var(--cor-vinho-principal);
+}
+
+/* Transições fluidas do seu efeito.css */
+.nav-menu ul li a,
+.btn-primary,
+.btn-submit,
+.card,
+.form-group input,
+.tech-img-placeholder,
+.wine-item,
+.btn-buy {
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   HEADER / MENU SUPERIOR (Layout com Flexbox)
+   ========================================================================== */
+.main-header {
+    background-color: var(--cor-vinho-medio);
+    color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--cor-vinho-principal);
+}
+
+.logo {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin-left: 30px;
+}
+
+.nav-menu ul li a {
+    color: var(--cor-creme-link);
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.nav-menu ul li a:hover {
+    color: var(--cor-dourado-cortica);
+    transform: scale(1.05);
+}
+
+.nav-menu ul li a:focus {
+    outline: 2px dashed var(--cor-dourado-cortica);
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   HERO BANNER
+   ========================================================================== */
+.hero-banner {
+    background-color: var(--cor-vinho-escuro);
+    background-image: linear-gradient(rgba(28, 5, 8, 0.4), rgba(28, 5, 8, 0.85));
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-branco);
+    padding: 0 20px;
+}
+
+.hero-content {
+    animation: elegantFade 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-branco);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--cor-creme-link);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--cor-dourado-cortica);
+    color: var(--cor-branco);
+    padding: 14px 35px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+.btn-primary:hover {
+    background-color: #3b0a10;
+    box-shadow: 0 10px 25px rgba(74, 18, 26, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS E HISTÓRIA (Cards com Flexbox)
+   ========================================================================== */
+.about-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.intro-text {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    color: var(--cor-texto-suave);
+    font-size: 1.1rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-creme-link);
+    padding: 25px;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(42, 30, 28, 0.03);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(42, 30, 28, 0.08);
+}
+
+.cards-container .card:nth-child(odd) {
+    border-left: 3px solid var(--cor-dourado-cortica);
+}
+
+.cards-container .card:nth-child(even) {
+    border-left: 3px solid var(--cor-vinho-principal);
+}
+
+.card-img-placeholder {
+    background-color: var(--cor-fundo-placeholder);
+    height: 240px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7a6864;
+    font-size: 0.9rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: var(--cor-texto-card);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   NOVA SEÇÃO: PRATELEIRA HORIZONTAL DE VINHOS (Flexbox Dinâmico)
+   ========================================================================== */
+.wine-shelf {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Alinha horizontalmente e quebra linha em telas menores */
+    margin-top: 40px;
+}
+
+.wine-item {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-creme-link);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(74, 18, 26, 0.1);
+}
+
+.wine-img-box {
+    background-color: #fafafa;
+    height: 220px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wine-item h4 {
+    font-size: 1.2rem;
+    color: var(--cor-vinho-principal);
+    margin-bottom: 5px;
+}
+
+.wine-type {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 10px;
+}
+
+.wine-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-vinho-medio);
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    display: block;
+    background-color: var(--cor-vinho-principal);
+    color: var(--cor-branco);
+    padding: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.btn-buy:hover {
+    background-color: var(--cor-dourado-cortica);
+    color: var(--cor-vinho-escuro);
+}
+
+/* ==========================================================================
+   SEÇÃO ADEGA INTELIGENTE
+   ========================================================================== */
+.tech-section {
+    background-color: var(--cor-fundo-tech);
+    padding: 90px 12%;
+}
+
+.tech-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.tech-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.tech-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.tech-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a3e3b;
+    margin-bottom: 15px;
+}
+
+.tech-visual {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tech-img-placeholder {
+    background-color: var(--cor-vinho-medio);
+    height: 350px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-creme-link);
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.tech-img-placeholder:hover {
+    transform: rotate(0.5deg) scale(1.01);
+}
+
+/* ==========================================================================
+   FORMULÁRIO DE CONTATO E DECORAÇÕES (Pseudo-elementos)
+   ========================================================================== */
+.contact-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--cor-branco);
+    padding: 40px;
+    border: 1px solid var(--cor-creme-link);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--cor-vinho-principal);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda-input);
+    background-color: var(--cor-input-fundo);
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    border-color: var(--cor-vinho-principal);
+    background-color: var(--cor-branco);
+    outline: none;
+    box-shadow: 0 0 12px rgba(74, 18, 26, 0.12);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--cor-vinho-principal);
+    color: var(--cor-branco);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    background-color: var(--cor-vinho-medio);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-footer {
+    background-color: var(--cor-vinho-profundo);
+    color: var(--cor-texto-mutado);
+    text-align: center;
+    padding: 25px;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--cor-vinho-medio);
+}
+
+.about-section h2::after,
+.tech-text h2::after,
+.contact-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--cor-dourado-cortica);
+    margin: 15px auto 0 auto;
+}
+
+.tech-text h2::after {
+    margin: 15px 0 0 0;
+}
+
+::selection {
+    background-color: var(--cor-vinho-principal);
+    color: var(--cor-branco);
+}
+
+@keyframes elegantFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
